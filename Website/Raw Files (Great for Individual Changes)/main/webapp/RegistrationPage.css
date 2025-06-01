@@ -1,0 +1,130 @@
+/* Registration Page CSS Alpha Team */
+/* Consists of Andres Melendez, Jeffrey Reid, Edgar Arroyo, Jordany Gonzalez, and Matthew Trinh */
+
+/* Purpose:
+This CSS file styles the Registration Page for Moffat Bay Lodge. It provides a visually appealing layout for the user
+to input their details, including their name, email, address, phone number, and password. The form is responsive and
+adapts to different screen sizes. The page includes a background image and custom styling for form elements, error
+messages, and other text. The layout is designed for both desktop and mobile views. */
+@charset "UTF-8";
+
+/* ===== Base Styling ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+}
+
+/* ===== Container Styling ===== */
+.container, #container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    max-width: 1200px;         /* ✅ Prevent content from stretching too wide */
+    margin: 60px auto;
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== Headings and Notices ===== */
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.requiredfield, .passrequirements {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.passrequirements {
+    font-size: 1rem;
+    padding: 0 8%;
+}
+
+span {
+    color: red;
+}
+
+/* ===== Layout Wrapping ===== */
+.entryfields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 5%;
+}
+
+/* ===== Field Column Blocks ===== */
+.entryleft, .entryright, .entryleft2, .entryright2 {
+    flex: 1 1 45%;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ===== Labels and Inputs ===== */
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ===== Submit Button ===== */
+.create {
+    display: block;
+    margin: 40px auto 20px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.create:hover {
+    background-color: #0056b3;
+}
+
+/* ===== Error Messages ===== */
+.error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 768px) {
+    .entryfields {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 8%;
+    }
+
+    .entryleft, .entryright, .entryleft2, .entryright2 {
+        width: 100%;
+        flex: 100%;
+    }
+
+    .create {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .passrequirements {
+        padding: 0 5%;
+    }
+}
